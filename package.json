@@ -1,0 +1,17 @@
+{
+  "name": "font-slice",
+  "version": "1.0.2",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "dependencies": {
+    "buffer-to-vinyl": "^1.1.0",
+    "finalhandler": "^1.2.0",
+    "fonteditor-core": "^2.1.11",
+    "fontmin": "^0.9.9",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "cssom": "^0.5.0",
+    "font-slice": "^1.0.2"
+  }
+}

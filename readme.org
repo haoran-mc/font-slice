@@ -1,0 +1,19 @@
+Forked from here: https://github.com/voderl/font-slice.
+
+* quick start
+1. 字体文件放入 =assets= 文件夹；
+2. 修改 =main.js= 中的生成信息；
+3. 运行项目：
+   #+begin_src shell
+     npm install --save-dev font-slice
+     yarn add -D font-slice
+   #+end_src
+4. 直接引用 output 文件夹下的 css 样式文件。
+
+* 字体切片原理
+将中文字体按照 Google Fonts 的切割子集方案，生成多个较小体积的资源包，仅需加载小部分字体资源即可展示完整页面。
+# 建议在 cdn 中将对应的字体目录直接设置一定时长的浏览器缓存，避免因字体加载导致页面内容闪动。
+
+1. 提取 google fonts 中的 unicode-range；
+2. 提取待处理字体包含的所有字符，与 google fonts 的 unicode-range 求交集；
+3. 将字符按照上面步骤得出的拆分方案，提取字体子集，生成多个文件及 css 样式文件。
